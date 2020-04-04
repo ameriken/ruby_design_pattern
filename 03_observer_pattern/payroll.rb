@@ -1,19 +1,6 @@
-module Subject
-  def initialize
-    @observers = []
-  end
-
-  def add_observer(observer)
-    @observers << observer
-  end
-
-  def delete_observer(observer)
-    @observers.delete(observer)
-  end
-
-  def notify_observers
-    @observers.each do |observer|
-      observer.updaaate(self)
-    end
+class Payroll
+  def update(changed_employee)  # Subjectオブジェクトを受け取る
+    puts "#{changed_employee.name}の給料が#{changed_employee.salary}ドルに上がりました!"
+    puts "経理部門は#{changed_employee.name}に小切手を切ります！"
   end
 end
